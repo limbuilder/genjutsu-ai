@@ -1,0 +1,1 @@
+import{P as e,et as t}from"./index-Dc1T0VX8.js";function n(n=!0){return t({queryKey:[`user-credits`],queryFn:()=>e(`/api/credits`),staleTime:3e4,enabled:n})}export{n as t};

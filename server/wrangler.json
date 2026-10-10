@@ -1,0 +1,51 @@
+{
+  "compatibility_date": "2026-09-30",
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "genjutsu-ai",
+  "account_id": "3f8f96e3145ebbab6b876c70e3db556c",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "DATABASE_PROVIDER": "d1",
+    "VITE_APP_URL": "https://genjutsuai.net",
+    "VITE_APP_NAME": "Genjutsu AI",
+    "VITE_APP_SUPPORT_EMAIL": "support@genjutsuai.net",
+    "GENJUTSU_MOTION_PROVIDER": "higgsfield",
+    "GENJUTSU_OBJECT_SWAP_PROVIDER": "higgsfield",
+    "ARK_API_BASE_URL": "https://ark.cn-beijing.volces.com/api/v3",
+    "SEEDANCE_VOLCENGINE_MODEL": "doubao-seedance-2-5-260628"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "genjutsu-ai-db",
+      "database_id": "4e1e2dfe-2cce-40f6-8b1b-885dd5f39e37",
+      "migrations_dir": "drizzle"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "R2_BUCKET",
+      "bucket_name": "genjutsu-ai"
+    }
+  ],
+  "main": "index.mjs",
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "../public"
+  },
+  "no_bundle": true,
+  "rules": [
+    {
+      "type": "ESModule",
+      "globs": [
+        "**/*.mjs",
+        "**/*.js"
+      ]
+    }
+  ]
+}
